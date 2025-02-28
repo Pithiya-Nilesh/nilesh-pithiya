@@ -5,7 +5,14 @@ import { SITE_TITLE } from '../consts';
 
 <header>
 	<nav>
-		<h2><a href="/nilesh-pithiya">{SITE_TITLE}</a></h2>
+			
+		<h2 class="profile-container">
+			<a href="/nilesh-pithiya" class="profile-link">
+				<img src="/nilesh-pithiya/nilesh-pithiya-cercle.png" alt="Nilesh Pithiya"/>
+				<span class="profile-name">Nilesh Pithiya</span>
+			</a>
+		</h2>
+		
 		<div class="internal-links">
 			<HeaderLink href="/nilesh-pithiya">Home</HeaderLink>
 			<!-- <HeaderLink href="/blog">Blog</HeaderLink> -->
@@ -73,4 +80,29 @@ import { SITE_TITLE } from '../consts';
 			display: none;
 		}
 	}
+	
+	.profile-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+
+	.profile-link {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		text-decoration: none;
+		color: black;
+		font-size: 18px;
+		font-weight: bold;
+	}
+
+	.profile-link img {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+
 </style>

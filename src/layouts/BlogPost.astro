@@ -19,6 +19,15 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				max-width: 100%;
 				margin: 0;
 			}
+			.hero-name {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				/* height: 25vh; */
+				margin: -10px;
+				font-weight: bold;
+				
+			}
 			.hero-image {
 				display: flex;
 				justify-content: center;
@@ -30,9 +39,8 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				display: block;
 				height: 20vh;
 				width: 20vh;
-
 				border-radius: 12px;
-				box-shadow: var(--box-shadow);
+				/* box-shadow: var(--box-shadow); */
 			}
 			.prose {
 				width: 720px;
@@ -42,7 +50,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				color: rgb(var(--gray-dark));
 			}
 			.title {
-				margin-bottom: 1em;
+				margin-bottom: 0;
 				padding: 1em 0;
 				text-align: center;
 				line-height: 1;
@@ -67,9 +75,11 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				<div class="hero-image">
 					{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
 				</div>
+				<p class="hero-name">Nilesh Pithiya</p>
+				<p class="hero-name">Certified Frappe Developer</p>
 				<div class="prose">
 					<div class="title">
-						<div class="date">
+						<!-- <div class="date">
 							<FormattedDate date={pubDate} />
 							{
 								updatedDate && (
@@ -78,7 +88,8 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 									</div>
 								)
 							}
-						</div>
+						</div> -->
+						<hr />
 						<h3>{title}</h3>
 						<hr />
 					</div>

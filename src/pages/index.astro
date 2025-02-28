@@ -9,10 +9,44 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			.hero-image {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 25vh;
+				
+			}
+			.hero-image img {
+				display: block;
+				height: 20vh;
+				width: 20vh;
+				border-radius: 12px;
+				/* box-shadow: var(--box-shadow); */
+			}
+			.hero-name {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				/* height: 25vh; */
+				margin: -10px;
+				font-weight: bold;				
+			}
+			hr{
+				margin: 2rem;
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
+			<div class="hero-image">
+				<img width={1020} height={510} src="/nilesh-pithiya/nilesh-pithiya-cercle.png" alt=""/>
+			</div>
+			<!-- <hr> -->
+			<p class="hero-name">Nilesh Pithiya</p>
+			<p class="hero-name">Certified Frappe Developer</p>
+			<hr>
 			<h3>Welcome to Nilesh Pithiya's Official Website</h3>
 
 			<p>Hi, I'm <strong>Nilesh Pithiya</strong>, a <strong>certified Frappe/ERPNext developer</strong> with expertise in <strong>Python, Frappe, SQL, MariaDB, Vue3, Astro, Tailwind, Bootstrap, Server Setup (AWS, Google Cloud, Self Hosted, Frappe Cloud)</strong> and more. I specialize in building customized ERP solutions, web applications and automation tools to help businesses streamline their operations. As a <strong>freelance developer</strong>, I offer tailored solutions to meet your specific needs.</p>
