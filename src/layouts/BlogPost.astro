@@ -20,11 +20,17 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				margin: 0;
 			}
 			.hero-image {
-				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 25vh;
+				
 			}
 			.hero-image img {
 				display: block;
-				margin: 0 auto;
+				height: 20vh;
+				width: 20vh;
+
 				border-radius: 12px;
 				box-shadow: var(--box-shadow);
 			}
@@ -73,7 +79,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 								)
 							}
 						</div>
-						<h1>{title}</h1>
+						<h3>{title}</h3>
 						<hr />
 					</div>
 					<slot />
