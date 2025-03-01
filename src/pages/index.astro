@@ -35,11 +35,62 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			hr{
 				margin: 2rem;
 			}
+
+			#hireNowButton {
+				position: fixed;
+				bottom: 20px;
+				right: 20px;
+				background-color: #333; /* Dark gray/black background */
+				color: white; /* White text */
+				padding: 10px 20px;
+				font-size: 18px;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 10px;
+				transition: transform 0.3s ease; /* Smooth transition */
+			}
+
+			/* Hover effect with background color */
+			#hireNowButton:hover {
+				background-color: #555; /* Lighter gray for hover */
+				transform: scale(1.1); /* Scale the button on hover */
+			}
+
+			/* Pulsing animation to grab attention */
+			#hireNowButton {
+				animation: pulse 2s infinite; /* Pulse animation for attention */
+			}
+
+			@keyframes pulse {
+				0% {
+					transform: scale(1);
+				}
+				50% {
+					transform: scale(1.1); /* Slightly larger */
+				}
+				100% {
+					transform: scale(1);
+				}
+			}
+
+			/* Style for the SVG icon */
+			#hireNowButton svg {
+				width: 24px;
+				height: 24px;
+				fill: white;
+			}
 		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
+  			<button id="hireNowButton">Hire Now</button>
+
 			<div class="hero-image">
 				<img width={1020} height={510} src="/nilesh-pithiya/nilesh-pithiya-cercle.png" alt=""/>
 			</div>
@@ -63,12 +114,27 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 			<p>Need a customized ERP solution or technical support?  
 				<a href="mailto:pithiyanilesh.d@gmail.com"><strong>Email me</strong></a> or  
-				<a href="https://wa.me/+918690396934" target="_blank"><strong>WhatsApp</strong></a> or  
+				<a href="https://wa.me/+917990915950" target="_blank"><strong>WhatsApp</strong></a> or  
 				<a href="tel:+918690396934" target="_blank"><strong>Call</strong></a> today!  
 			</p>
 			<hr>
 				<img src="/nilesh-pithiya/CERT-03708_page-0001.jpg" />
 		</main>
 		<Footer />
+
+	<script>
+ function sendEmail() {
+      const email = "pithiyanilesh.d@gmail.com";
+      const subject = "Hire Developer Inquiry";
+      const body = "Hello, I am interested in discussing a freelance project. Please let me know if you are available to discuss further.";
+
+      // Create the mailto link and trigger it
+      window.location.href = `mailto:${email}?to=${email}subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    }
+
+    // Add click event listener to the Hire Now button
+    document.getElementById("hireNowButton").addEventListener("click", sendEmail);	</script>
+
+
 	</body>
 </html>
