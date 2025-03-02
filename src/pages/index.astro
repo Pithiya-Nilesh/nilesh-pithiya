@@ -129,7 +129,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
       const body = "Hello, I am interested in discussing a freelance project. Please let me know if you are available to discuss further.";
 
       // Create the mailto link and trigger it
-      window.location.href = `mailto:${email}?to=${email}subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = `mailto:${email}?to=${email}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     }
 
     // Add click event listener to the Hire Now button
